@@ -45,13 +45,13 @@ export default class MultiSlider extends React.Component {
     static defaultProps = {
       values: [0],
       onValuesChangeStart: () => {
-        console.log('press started');
+        // console.log('press started');
       },
       onValuesChange: (values) => {
-        console.log('changing', values);
+        // console.log('changing', values);
       },
       onValuesChangeFinish: (values) => {
-        console.log('changed', values);
+        // console.log('changed', values);
       },
       step: 1,
       min: 0,
@@ -70,7 +70,9 @@ export default class MultiSlider extends React.Component {
       super(props);
 
       this.optionsArray = this.props.optionsArray || createArray(this.props.min, this.props.max, this.props.step);
-      this.stepLength = this.props.sliderLength / this.optionsArray.length;
+      // this.stepLength = this.props.sliderLength / this.optionsArray.length;
+      this.stepLength = 0;
+
 
       var initialValues = this.props.values.map(value => valueToPosition(value, this.optionsArray, this.props.sliderLength));
 

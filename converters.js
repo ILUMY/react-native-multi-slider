@@ -5,7 +5,6 @@ export function valueToPosition(value, valuesArray, sliderLength) {
   var index = valuesArray.indexOf(value);
 
   if (index === -1) {
-    console.log('Invalid value, array does not contain: ', value)
     return null;
   } else {
     arrLength = valuesArray.length - 1;
@@ -18,7 +17,6 @@ export function positionToValue(position, valuesArray, sliderLength) {
   var index;
 
   if ( position < 0 || sliderLength < position ) {
-    console.log('invalid position: ', position);
     return null;
   } else {
     arrLength = valuesArray.length - 1;
@@ -33,7 +31,6 @@ export function createArray(start, end, step) {
   var direction = start - end > 0 ? -1 : 1;
   var result = [];
   if (!step) {
-      console.log('invalid step: ', step);
       return result;
   } else {
       length = Math.abs((start - end)/step) + 1;
