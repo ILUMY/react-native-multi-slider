@@ -71,7 +71,7 @@ export default class MultiSlider extends React.Component {
 
       this.optionsArray = this.props.optionsArray || createArray(this.props.min, this.props.max, this.props.step);
       // this.stepLength = this.props.sliderLength / this.optionsArray.length;
-      this.stepLength = 0;
+      this.stepLength = 0.1;
 
 
       var initialValues = this.props.values.map(value => valueToPosition(value, this.optionsArray, this.props.sliderLength));
